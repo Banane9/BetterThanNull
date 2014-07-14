@@ -4,10 +4,23 @@ using System.Linq;
 
 namespace BetterThanNull
 {
+    /// <summary>
+    /// Contains a Value that is guaranteed to be not null.
+    /// <para/>
+    /// Don't try to use the default constructor, it will throw a NotSupportedException.
+    /// </summary>
+    /// <typeparam name="T">The type of the Value.</typeparam>
     public struct Definitely<T>
     {
+        /// <summary>
+        /// The contained Value. Guaranteed to be not null.
+        /// </summary>
         public readonly T Value;
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="BetterThanNull.Definitely&lt;T&gt;"/> struct with the given value.
+        /// </summary>
+        /// <param name="value">The not null value.</param>
         public Definitely(T value)
         {
             if (value == null)
