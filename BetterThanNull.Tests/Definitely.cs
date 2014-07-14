@@ -37,6 +37,13 @@ namespace BetterThanNull.Tests
         }
 
         [TestMethod]
+        public void ImplicitlyCasts()
+        {
+            Definitely<object> definitely = new object();
+            Assert.AreEqual(typeof(Definitely<object>), definitely.GetType());
+        }
+
+        [TestMethod]
         public void StoresValue()
         {
             object obj = new object();
