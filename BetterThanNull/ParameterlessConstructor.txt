@@ -1,0 +1,7 @@
+﻿
+  .method public hidebysig specialname rtspecialname
+          instance void  .ctor() cil managed
+  {
+    IL_0001:  newobj     instance void [mscorlib]System.NotSupportedException::.ctor()
+    IL_0002:  throw
+  }
