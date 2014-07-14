@@ -1,7 +1,9 @@
 ﻿
-  .method public hidebysig specialname rtspecialname
-          instance void  .ctor() cil managed
+  .method public hidebysig specialname rtspecialname 
+        instance void  .ctor() cil managed
   {
-    IL_0001:  newobj     instance void [mscorlib]System.NotSupportedException::.ctor()
-    IL_0002:  throw
-  }
+    // Code size       6 (0x6)
+    .maxstack  8
+    IL_0000:  newobj     instance void [mscorlib]System.NotSupportedException::.ctor()
+    IL_0005:  throw
+  } // end of method Definitely`1::.ctor

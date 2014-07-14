@@ -65,5 +65,23 @@ namespace BetterThanNull.Tests
 
             Assert.Fail("Creating Definitely with the default constructor should throw a NotSupportedException.");
         }
+
+        [TestMethod]
+        public void UsedForAFieldValueShouldntBeNull()
+        {
+            var testObject = new TestObject();
+
+            Assert.AreNotEqual(null, test(testObject.test));
+        }
+
+        private object test(Definitely<object> definitely)
+        {
+            return definitely.Value;
+        }
+
+        private class TestObject
+        {
+            public Definitely<object> test;
+        }
     }
 }
